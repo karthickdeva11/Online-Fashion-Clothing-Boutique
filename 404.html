@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 Page Not Found | ÉLÉGANCE ATELIER</title>
+
+  <!-- Brand Favicon -->
+  <link rel="icon" type="image/webp" href="logo_0027.webp" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Core Boutique Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background-color: #0d0f12;
+      color: #fff;
+      margin: 0;
+    }
+
+    .not-found-section {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4.5rem 1.5rem 5rem 1.5rem;
+      background: radial-gradient(circle at 50% 38%, #1c232f 0%, #0d0f12 85%);
+      position: relative;
+    }
+
+    .not-found-card {
+      max-width: 680px;
+      margin: 0 auto;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .not-found-brand {
+      margin-bottom: 2rem;
+      display: inline-block;
+      transition: transform var(--transition-fast);
+      text-decoration: none;
+    }
+
+    .not-found-brand:hover {
+      transform: scale(1.04);
+    }
+
+    .not-found-brand-img {
+      height: 56px;
+      width: auto;
+      max-width: 220px;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 18px rgba(197, 160, 89, 0.35));
+    }
+
+    .not-found-num {
+      font-family: var(--font-serif);
+      font-size: 8.5rem;
+      font-weight: 700;
+      line-height: 1;
+      background: linear-gradient(135deg, #dfbe7d 0%, #c5a059 50%, #e8d0a3 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.04em;
+      filter: drop-shadow(0 4px 20px rgba(197, 160, 89, 0.25));
+    }
+
+    .not-found-title {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+
+    .not-found-desc {
+      font-size: 1.05rem;
+      color: #94a3b8;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+      max-width: 560px;
+    }
+
+    .not-found-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .btn-action {
+      min-width: 230px;
+      padding: 0.95rem 1.8rem;
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      text-decoration: none;
+      font-family: var(--font-sans);
+    }
+
+    .btn-previous-page {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--gold-primary);
+      color: var(--gold-light);
+    }
+
+    .btn-previous-page:hover {
+      background: var(--gold-primary);
+      color: #0d0f12;
+      border-color: var(--gold-primary);
+      box-shadow: 0 6px 25px rgba(197, 160, 89, 0.45);
+      transform: translateY(-2px);
+    }
+
+    .btn-home-page {
+      background: var(--gold-gradient);
+      border: 1px solid transparent;
+      color: #0d0f12;
+      font-weight: 700;
+      box-shadow: 0 4px 20px rgba(197, 160, 89, 0.35);
+    }
+
+    .btn-home-page:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(197, 160, 89, 0.55);
+      color: #0d0f12;
+    }
+
+    @media (max-width: 640px) {
+      .not-found-num {
+        font-size: 6rem;
+      }
+      .not-found-title {
+        font-size: 1.75rem;
+      }
+      .not-found-actions {
+        flex-direction: column;
+        width: 100%;
+      }
+      .btn-action {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 404 Main Section (Navigation Bar Completely Removed) -->
+  <main class="not-found-section">
+    <div class="not-found-card">
+      
+      <!-- Brand Logo in 404 Card -->
+      <a href="index.html" class="not-found-brand" title="Élégance Atelier - Return to Home" onclick="prepareHomeNavigation()">
+        <img src="logo_0027.webp" alt="Élégance Atelier Brand Logo" class="not-found-brand-img" />
+      </a>
+
+      <!-- Dynamic Form Validation Badge (When redirected from Newsletter or Checkout) -->
+      <div id="validation-badge-box" style="display:none; margin-bottom: 1.5rem;">
+        <span style="display:inline-flex; align-items:center; gap:0.5rem; background: rgba(16, 185, 129, 0.15); border: 1px solid #10b981; color: #34d399; padding: 0.4rem 1.2rem; border-radius: 30px; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;">
+          <i class="fa-solid fa-circle-check"></i> <span id="validation-badge-text">Form Successfully Validated</span>
+        </span>
+      </div>
+
+      <div class="not-found-num">404</div>
+      <h1 class="not-found-title" id="not-found-title">The Silhouette Has Vanished</h1>
+      <p class="not-found-desc" id="not-found-desc">
+        The haute couture piece or lookbook page you are attempting to view has retired from the runway or moved to our private archives.
+      </p>
+
+      <!-- The 2 Required Action Buttons -->
+      <div class="not-found-actions">
+        <!-- Button 1: Back to Previous Page -->
+        <button type="button" id="btn-back-previous" class="btn-action btn-previous-page" onclick="goBackToPrevious()">
+          <i class="fa-solid fa-arrow-left"></i> Back to Previous Page
+        </button>
+
+        <!-- Button 2: Back to Home -->
+        <a href="index.html" id="btn-back-home" class="btn-action btn-home-page" onclick="prepareHomeNavigation()">
+          <i class="fa-solid fa-house"></i> Back to Home
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Script for Navigation & Dynamic Messages -->
+  <script>
+    // Ensure native scroll restoration behavior
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'auto';
+    }
+
+    /**
+     * Function: goBackToPrevious
+     * Navigates the patron back to their exact previous page, area, and scroll position.
+     */
+    function goBackToPrevious() {
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'auto';
+      }
+
+      const referrer = document.referrer;
+      const isSameHost = referrer && (referrer.includes(window.location.host) || referrer.includes('index.html'));
+      const savedSection = sessionStorage.getItem('elegance_return_section_id');
+
+      // If user came from a previous page in this tab session
+      if (window.history.length > 1) {
+        window.history.back();
+
+        // Safety fallback if history.back didn't navigate (e.g. direct entry or sandbox tab)
+        setTimeout(() => {
+          if (isSameHost) {
+            window.location.href = referrer;
+          } else if (savedSection) {
+            window.location.href = 'index.html#' + savedSection;
+          } else {
+            window.location.href = 'index.html';
+          }
+        }, 300);
+      } else if (isSameHost) {
+        window.location.href = referrer;
+      } else if (savedSection) {
+        window.location.href = 'index.html#' + savedSection;
+      } else {
+        window.location.href = 'index.html';
+      }
+    }
+
+    /**
+     * Function: prepareHomeNavigation
+     * Clears return scroll markers so that clicking Back to Home starts fresh at the top of the boutique.
+     */
+    function prepareHomeNavigation() {
+      sessionStorage.removeItem('elegance_return_scroll_y');
+      sessionStorage.removeItem('elegance_return_section_id');
+      sessionStorage.removeItem('elegance_recent_scroll_y');
+    }
+
+    // Dynamic Form Validation Message Handler
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const from = params.get('from');
+      const badgeBox = document.getElementById('validation-badge-box');
+      const badgeText = document.getElementById('validation-badge-text');
+      const titleEl = document.getElementById('not-found-title');
+      const descEl = document.getElementById('not-found-desc');
+
+      if (from === 'newsletter') {
+        if (badgeBox) badgeBox.style.display = 'block';
+        if (badgeText) badgeText.textContent = 'Email Form Validated';
+        if (titleEl) titleEl.textContent = 'Private Salon Portal (404)';
+        if (descEl) descEl.textContent = 'Your email was successfully validated! However, the VIP trunk show salon page you were redirected to is currently undergoing seasonal curation.';
+      } else if (from === 'checkout') {
+        if (badgeBox) badgeBox.style.display = 'block';
+        if (badgeText) badgeText.textContent = 'Checkout Form Validated';
+        if (titleEl) titleEl.textContent = 'VIP Payment Gateway (404)';
+        if (descEl) descEl.textContent = 'Your checkout form was successfully validated and authorized! The payment confirmation endpoint you were redirected to is currently in private preview mode.';
+      }
+    });
+  </script>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container" style="text-align: center;">
+      <a href="index.html" class="brand-logo" title="Élégance Atelier" style="margin: 0 auto 1.25rem auto;" onclick="prepareHomeNavigation()">
+        <img src="logo_0027.webp" alt="Élégance Atelier Brand Logo" class="brand-logo-img footer-logo-img" />
+      </a>
+      <p>&copy; 2026 ÉLÉGANCE ATELIER Inc. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

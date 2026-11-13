@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ÉLÉGANCE ATELIER | Luxury Fashion & Haute Couture Boutique</title>
+  <meta name="description" content="Discover the finest in designer fashion, evening gowns, tailored shirts, luxury handbags, fine jewellery, and timepieces at Élégance Atelier." />
+
+  <!-- Brand Favicon -->
+  <link rel="icon" type="image/webp" href="logo_0027.webp" />
+
+  <!-- Google Fonts: Playfair Display (Serif) & Plus Jakarta Sans (Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- AOS (Animate on Scroll) CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <!-- Core Boutique Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ========================================================================
+       TOP ANNOUNCEMENT BAR
+       ======================================================================== -->
+  <aside class="announcement-bar" aria-label="Announcement">
+    <div class="container">
+      <div class="announcement-center">
+        <span>✨ Complimentary VIP Express Courier on orders over $150 | Use code <span class="announcement-highlight">VOGUE25</span> for 25% Off</span>
+      </div>
+      <div class="announcement-right">
+        <label for="currency-select" style="display:none;">Currency</label>
+        <select id="currency-select" class="currency-select" title="Select Currency">
+          <option value="USD">USD ($)</option>
+          <option value="EUR">EUR (€)</option>
+          <option value="GBP">GBP (£)</option>
+        </select>
+        <span><i class="fa-solid fa-phone-volume" style="margin-right: 4px;"></i> Concierge: +1 (800) 458-MODE</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       MAIN HEADER & NAVIGATION
+       ======================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      
+      <!-- Brand Logo Image -->
+      <a href="#hero" class="brand-logo" title="Élégance Atelier">
+        <img src="logo_0027.webp" alt="Élégance Atelier Brand Logo" class="brand-logo-img" />
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav" id="desktop-nav" aria-label="Primary Navigation">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#categories" class="nav-link">Categories</a>
+        <a href="#catalog" class="nav-link">Collection</a>
+        <a href="#new-arrivals" class="nav-link">New Arrivals</a>
+        <a href="#trending" class="nav-link">Trending</a>
+        <a href="#bestsellers" class="nav-link">Best Sellers</a>
+        <a href="#offers" class="nav-link">Private Offers</a>
+        <a href="#testimonials" class="nav-link">Patrons</a>
+      </nav>
+
+      <!-- Header Actions (Search, Wishlist, Cart, Mobile Toggle) -->
+      <div class="header-actions">
+        <!-- Wishlist Button -->
+        <button class="action-btn" id="wishlist-btn" title="View Wishlist" aria-label="Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="badge-count" id="wishlist-badge">0</span>
+        </button>
+
+        <!-- Shopping Bag Button -->
+        <div class="cart-btn-wrapper" id="cart-btn" title="View Shopping Bag" role="button" tabindex="0">
+          <div class="cart-icon-box">
+            <i class="fa-solid fa-bag-shopping cart-icon"></i>
+            <span class="badge-count" id="cart-badge">0</span>
+          </div>
+          <span class="cart-total-text" id="cart-total-preview">$0.00</span>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       HERO SECTION WITH GSAP FASHION SLIDER
+       ======================================================================== -->
+  <section class="hero-section" id="hero">
+    <div class="hero-bg-overlay"></div>
+
+    <div class="hero-slider-track" id="hero-slider-track">
+
+      <!-- Slide 1: Haute Couture Evening Gowns -->
+      <div class="hero-slide active" data-slide="0">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-content">
+              <div class="hero-eyebrow">
+                <i class="fa-solid fa-crown" style="color: var(--gold-light);"></i>
+                <span>Spring / Summer Haute Couture 2026</span>
+              </div>
+              <h1 class="hero-title">
+                Where Elegance <br />
+                <span class="gold-text">Transcends Time.</span>
+              </h1>
+              <p class="hero-description">
+                Discover quintessential silhouettes, master tailoring, and curated runway evening gowns from the world's most prestigious fashion maisons. Crafted for the discerning aesthetic.
+              </p>
+              <div class="hero-cta-group">
+                <button class="btn btn-primary" onclick="filterByCategory('womens-dresses')">
+                  <i class="fa-solid fa-gem"></i> Shop Eveningwear
+                </button>
+                <a href="#categories" class="btn btn-outline">
+                  Explore Lookbook <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+              <div class="hero-stats">
+                <div class="stat-item">
+                  <span class="stat-number">50+</span>
+                  <span class="stat-label">Designer Maisons</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">100%</span>
+                  <span class="stat-label">Authentic Pieces</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">4.9★</span>
+                  <span class="stat-label">Elite Patron Rating</span>
+                </div>
+              </div>
+            </div>
+            <div class="hero-visual">
+              <div class="hero-image-frame">
+                <img class="hero-img" 
+                     src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1200&auto=format&fit=crop" 
+                     alt="Haute Couture Evening Gown" />
+              </div>
+              <div class="floating-badge floating-badge-1">
+                <div class="floating-badge-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                <div class="floating-badge-text">
+                  <span class="floating-badge-title">Bespoke Atelier</span>
+                  <span class="floating-badge-sub">Handcrafted Excellence</span>
+                </div>
+              </div>
+              <div class="floating-badge floating-badge-2">
+                <div class="floating-badge-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                <div class="floating-badge-text">
+                  <span class="floating-badge-title">VIP White Glove</span>
+                  <span class="floating-badge-sub">Overnight Global Courier</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: Sartorial Menswear & Tailored Shirts -->
+      <div class="hero-slide" data-slide="1">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-content">
+              <div class="hero-eyebrow">
+                <i class="fa-solid fa-shirt" style="color: var(--gold-light);"></i>
+                <span>Sartorial Mastery & Menswear 2026</span>
+              </div>
+              <h1 class="hero-title">
+                Precision Cut. <br />
+                <span class="gold-text">Timeless Authority.</span>
+              </h1>
+              <p class="hero-description">
+                Sharp silhouettes sculpted in pure Italian wool and Egyptian cotton. Refined shirts, bespoke jackets, and executive chronographs designed for modern distinction.
+              </p>
+              <div class="hero-cta-group">
+                <button class="btn btn-primary" onclick="filterByCategory('mens-shirts')">
+                  <i class="fa-solid fa-shirt"></i> Discover Sartorial
+                </button>
+                <a href="#bestsellers" class="btn btn-outline">
+                  View Timepieces <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+              <div class="hero-stats">
+                <div class="stat-item">
+                  <span class="stat-number">120+</span>
+                  <span class="stat-label">Tailored Styles</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">Super 150s</span>
+                  <span class="stat-label">Italian Weaves</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">Bespoke</span>
+                  <span class="stat-label">Milanese Cut</span>
+                </div>
+              </div>
+            </div>
+            <div class="hero-visual">
+              <div class="hero-image-frame">
+                <img class="hero-img" 
+                     src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1200&auto=format&fit=crop" 
+                     alt="Sartorial Menswear & Suits" />
+              </div>
+              <div class="floating-badge floating-badge-1">
+                <div class="floating-badge-icon"><i class="fa-solid fa-scissors"></i></div>
+                <div class="floating-badge-text">
+                  <span class="floating-badge-title">Milanese Tailoring</span>
+                  <span class="floating-badge-sub">Hand-stitched Lapels</span>
+                </div>
+              </div>
+              <div class="floating-badge floating-badge-2">
+                <div class="floating-badge-icon"><i class="fa-solid fa-stopwatch"></i></div>
+                <div class="floating-badge-text">
+                  <span class="floating-badge-title">Horological Elegance</span>
+                  <span class="floating-badge-sub">Swiss Automatic Movement</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Designer Leather & Fine Jewellery -->
+      <div class="hero-slide" data-slide="2">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-content">
+              <div class="hero-eyebrow">
+                <i class="fa-solid fa-gem" style="color: var(--gold-light);"></i>
+                <span>Atelier Leather & Haute Jewellery</span>
+              </div>
+              <h1 class="hero-title">
+                Sculpted in Gold, <br />
+                <span class="gold-text">Bound in Leather.</span>
+              </h1>
+              <p class="hero-description">
+                Exclusive designer calfskin handbags, diamond-encrusted fine jewellery, and iconic luxury timepieces crafted to appreciate in beauty and heritage over generations.
+              </p>
+              <div class="hero-cta-group">
+                <button class="btn btn-primary" onclick="filterByCategory('womens-bags')">
+                  <i class="fa-solid fa-bag-shopping"></i> Explore Handbags
+                </button>
+                <a href="404.html" class="btn btn-outline">
+                  Fine Jewellery <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+              <div class="hero-stats">
+                <div class="stat-item">
+                  <span class="stat-number">24K</span>
+                  <span class="stat-label">Gold Accents</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">Full Grain</span>
+                  <span class="stat-label">Florentine Calfskin</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">VVS1</span>
+                  <span class="stat-label">Certified Gems</span>
+                </div>
+              </div>
+            </div>
+            <div class="hero-visual">
+              <div class="hero-image-frame">
+                <img class="hero-img" 
+                     src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?q=80&w=1200&auto=format&fit=crop" 
+                     alt="Designer Leather Handbag" />
+              </div>
+              <div class="floating-badge floating-badge-1">
+                <div class="floating-badge-icon"><i class="fa-solid fa-gem"></i></div>
+                <div class="floating-badge-text">
+                  <span class="floating-badge-title">VVS1 Diamonds</span>
+                  <span class="floating-badge-sub">Conflict-Free Certified</span>
+                </div>
+              </div>
+              <div class="floating-badge floating-badge-2">
+                <div class="floating-badge-icon"><i class="fa-solid fa-award"></i></div>
+                <div class="floating-badge-text">
+                  <span class="floating-badge-title">Artisanal Tannery</span>
+                  <span class="floating-badge-sub">Heritage Craftsmanship</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4: Runway Avant-Garde & Eyewear -->
+      <div class="hero-slide" data-slide="3">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-content">
+              <div class="hero-eyebrow">
+                <i class="fa-solid fa-glasses" style="color: var(--gold-light);"></i>
+                <span>Runway Statement & Haute Eyewear</span>
+              </div>
+              <h1 class="hero-title">
+                Daring Silhouettes. <br />
+                <span class="gold-text">Unapologetic Grace.</span>
+              </h1>
+              <p class="hero-description">
+                Bold runway-ready eyewear, statement footwear, and limited atelier drops fresh off the Paris Fashion Week presentations. Made for those who set the trend.
+              </p>
+              <div class="hero-cta-group">
+                <button class="btn btn-primary" onclick="filterByCategory('sunglasses')">
+                  <i class="fa-solid fa-glasses"></i> Explore Eyewear
+                </button>
+                <a href="404.html" class="btn btn-outline">
+                  Haute Footwear <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+              <div class="hero-stats">
+                <div class="stat-item">
+                  <span class="stat-number">Limited</span>
+                  <span class="stat-label">Numbered Drops</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">UV400</span>
+                  <span class="stat-label">Italian Acetate</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">Paris</span>
+                  <span class="stat-label">Fashion Week Edit</span>
+                </div>
+              </div>
+            </div>
+            <div class="hero-visual">
+              <div class="hero-image-frame">
+                <img class="hero-img" 
+                     src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=1200&auto=format&fit=crop" 
+                     alt="Runway Haute Eyewear & Fashion" />
+              </div>
+              <div class="floating-badge floating-badge-1">
+                <div class="floating-badge-icon"><i class="fa-solid fa-eye"></i></div>
+                <div class="floating-badge-text">
+                  <span class="floating-badge-title">Hand-Polished</span>
+                  <span class="floating-badge-sub">Mazzucchelli Acetate</span>
+                </div>
+              </div>
+              <div class="floating-badge floating-badge-2">
+                <div class="floating-badge-icon"><i class="fa-solid fa-star"></i></div>
+                <div class="floating-badge-text">
+                  <span class="floating-badge-title">Runway Exclusive</span>
+                  <span class="floating-badge-sub">Limited Production</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Slider Navigation Controls -->
+    <div class="hero-slider-nav">
+      <button class="hero-nav-btn prev-btn" id="hero-prev-btn" aria-label="Previous Slide" title="Previous Slide">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+      <!-- Dots with Progress Indicator -->
+      <div class="hero-slider-pagination" id="hero-slider-pagination">
+        <button class="hero-dot active" data-index="0" aria-label="Slide 1"><span class="hero-dot-progress"></span></button>
+        <button class="hero-dot" data-index="1" aria-label="Slide 2"><span class="hero-dot-progress"></span></button>
+        <button class="hero-dot" data-index="2" aria-label="Slide 3"><span class="hero-dot-progress"></span></button>
+        <button class="hero-dot" data-index="3" aria-label="Slide 4"><span class="hero-dot-progress"></span></button>
+      </div>
+
+      <!-- Slide Counter Indicator -->
+      <div class="hero-slide-counter">
+        <span class="current-slide" id="hero-current-slide">01</span>
+        <span class="counter-divider">/</span>
+        <span class="total-slides">04</span>
+      </div>
+
+      <button class="hero-nav-btn next-btn" id="hero-next-btn" aria-label="Next Slide" title="Next Slide">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FEATURED CATEGORIES SECTION
+       ======================================================================== -->
+  <section class="categories-section" id="categories">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Curated Collections</span>
+        <h2 class="section-title">Explore Iconic Departments</h2>
+        <p class="section-subtitle">Select a category to view bespoke garments, luxurious leatherwork, and fine accessories tailored for elevated styling.</p>
+      </div>
+
+      <div class="categories-grid">
+        <!-- Category 1: Women's Dresses -->
+        <div class="category-card" data-category="womens-dresses" data-aos="fade-up" data-aos-delay="50">
+          <img class="category-img" src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=800&auto=format&fit=crop" alt="Women's Evening Dresses" />
+          <div class="category-overlay">
+            <span class="category-tag">Haute Eveningwear</span>
+            <h3 class="category-name">Women's Gowns & Dresses</h3>
+            <a href="404.html" class="category-action">Discover Collection <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Category 2: Men's Shirts -->
+        <div class="category-card" data-category="mens-shirts" data-aos="fade-up" data-aos-delay="100">
+          <img class="category-img" src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=800&auto=format&fit=crop" alt="Men's Tailored Shirts" />
+          <div class="category-overlay">
+            <span class="category-tag">Sartorial Mastery</span>
+            <h3 class="category-name">Men's Tailored Shirts</h3>
+            <a href="404.html" class="category-action">Discover Collection <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Category 3: Designer Handbags -->
+        <div class="category-card" data-category="womens-bags" data-aos="fade-up" data-aos-delay="150">
+          <img class="category-img" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=800&auto=format&fit=crop" alt="Designer Handbags" />
+          <div class="category-overlay">
+            <span class="category-tag">Fine Leather Goods</span>
+            <h3 class="category-name">Designer Handbags</h3>
+            <a href="404.html" class="category-action">Discover Collection <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Category 4: Fine Jewellery -->
+        <div class="category-card" data-category="womens-jewellery" data-aos="fade-up" data-aos-delay="200">
+          <img class="category-img" src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=800&auto=format&fit=crop" alt="Fine Jewellery" />
+          <div class="category-overlay">
+            <span class="category-tag">Precious Diamonds & Gems</span>
+            <h3 class="category-name">Fine Jewellery</h3>
+            <a href="404.html" class="category-action">Discover Collection <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Category 5: Luxury Footwear -->
+        <div class="category-card" data-category="womens-shoes" data-aos="fade-up" data-aos-delay="250">
+          <img class="category-img" src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80&w=800&auto=format&fit=crop" alt="Luxury Footwear" />
+          <div class="category-overlay">
+            <span class="category-tag">Stiletto & Atelier Shoes</span>
+            <h3 class="category-name">Haute Footwear</h3>
+            <a href="404.html" class="category-action">Discover Collection <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Category 6: Timepieces & Chronographs -->
+        <div class="category-card" data-category="womens-watches" data-aos="fade-up" data-aos-delay="300">
+          <img class="category-img" src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=800&auto=format&fit=crop" alt="Luxury Watches" />
+          <div class="category-overlay">
+            <span class="category-tag">Horological Marvels</span>
+            <h3 class="category-name">Luxury Timepieces</h3>
+            <a href="404.html" class="category-action">Discover Collection <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       PRODUCT CATALOG SECTION (SEARCH, FILTERS, SORT & DYNAMIC GRID)
+       ======================================================================== -->
+  <section class="catalog-section" id="catalog">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Haute Curation</span>
+        <h2 class="section-title">The Boutique Collection</h2>
+        <p class="section-subtitle">Real-time dynamic catalog powered by DummyJSON Products API. Search, filter, and sort our boutique selections.</p>
+      </div>
+
+      <!-- Controls Toolbar (Search, Sort, Categories) -->
+      <div class="catalog-toolbar" data-aos="fade-up">
+        <div class="toolbar-top">
+          <!-- Search Box -->
+          <div class="search-box">
+            <input type="text" id="search-input" class="search-input" placeholder="Search by name, gown, shirt, Rolex, bag..." aria-label="Search Products" />
+            <button class="search-clear-btn" id="search-clear-btn" title="Clear Search"><i class="fa-solid fa-xmark"></i></button>
+            <span class="search-icon-btn"><i class="fa-solid fa-magnifying-glass"></i></span>
+          </div>
+
+          <!-- Sort Select -->
+          <div class="toolbar-controls">
+            <div class="sort-wrapper">
+              <label for="sort-select" class="sort-label"><i class="fa-solid fa-arrow-down-wide-short"></i> Sort:</label>
+              <select id="sort-select" class="sort-select" title="Sort Products">
+                <option value="default">Featured & Curated</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="rating-desc">Patron Rating: High to Low</option>
+                <option value="name-asc">Product Name: A to Z</option>
+                <option value="discount-desc">Highest Discount</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category Filter Pills -->
+        <div class="category-pills" id="category-pills">
+          <button class="category-pill active" data-category="all">All Creations</button>
+          <button class="category-pill" data-category="womens-dresses"><i class="fa-solid fa-person-dress"></i> Evening Gowns</button>
+          <button class="category-pill" data-category="mens-shirts"><i class="fa-solid fa-shirt"></i> Men's Shirts</button>
+          <button class="category-pill" data-category="womens-shoes"><i class="fa-solid fa-shoe-prints"></i> Women's Shoes</button>
+          <button class="category-pill" data-category="womens-bags"><i class="fa-solid fa-bag-shopping"></i> Luxury Handbags</button>
+          <button class="category-pill" data-category="womens-jewellery"><i class="fa-solid fa-gem"></i> Fine Jewellery</button>
+          <button class="category-pill" data-category="womens-watches"><i class="fa-solid fa-clock"></i> Luxury Watches</button>
+          <button class="category-pill" data-category="mens-shoes"><i class="fa-solid fa-shoe-prints"></i> Men's Shoes</button>
+          <button class="category-pill" data-category="sunglasses"><i class="fa-solid fa-glasses"></i> Eyewear</button>
+        </div>
+      </div>
+
+      <!-- Status Bar (Count & Reset) -->
+      <div class="catalog-status-bar">
+        <div class="results-count" id="results-count">
+          Showing <span>...</span> pieces
+        </div>
+        <button class="reset-filters-btn" onclick="resetFilters()">
+          <i class="fa-solid fa-rotate-left"></i> Reset Filters
+        </button>
+      </div>
+
+      <!-- Dynamic Product Cards Grid -->
+      <div class="products-grid" id="catalog-grid">
+        <!-- Skeleton loaders injected initially, then dynamic cards -->
+      </div>
+
+      <!-- Pagination / Load More -->
+      <div class="pagination-wrapper" id="pagination-wrapper">
+        <span class="load-more-counter" id="load-more-counter">Displaying 8 of 49 products</span>
+        <button class="btn-load-more" id="btn-load-more">
+          <i class="fa-solid fa-plus"></i> Load More Creations
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       NEW ARRIVALS SECTION
+       ======================================================================== -->
+  <section class="catalog-section" id="new-arrivals" style="background-color: var(--bg-light);">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Just Landed</span>
+        <h2 class="section-title">New Season Drops</h2>
+        <p class="section-subtitle">Freshly unveiled pieces from the international ateliers, straight from the Milan and Paris runways.</p>
+      </div>
+
+      <div class="products-grid" id="new-arrivals-grid">
+        <!-- Populated dynamically via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       TRENDING PRODUCTS SECTION
+       ======================================================================== -->
+  <section class="catalog-section" id="trending" style="background-color: var(--bg-light-alt);">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">In High Demand</span>
+        <h2 class="section-title">Trending Haute Essentials</h2>
+        <p class="section-subtitle">The pieces capturing the spotlight in fashion editorial shoots and private salon viewings.</p>
+      </div>
+
+      <div class="products-grid" id="trending-grid">
+        <!-- Populated dynamically via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       BEST SELLERS SECTION
+       ======================================================================== -->
+  <section class="catalog-section" id="bestsellers" style="background-color: var(--bg-light);">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Timeless Signatures</span>
+        <h2 class="section-title">Most-Coveted Best Sellers</h2>
+        <p class="section-subtitle">Celebrated staples with pristine craftsmanship and highest patron appraisal ratings.</p>
+      </div>
+
+      <div class="products-grid" id="bestsellers-grid">
+        <!-- Populated dynamically via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SPECIAL OFFERS SECTION (COUNTDOWN TIMER & 3 PROMOTIONAL CARDS)
+       ======================================================================== -->
+  <section class="offers-section" id="offers">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">VIP Privileges</span>
+        <h2 class="section-title">Exclusive Salon Offers</h2>
+        <p class="section-subtitle">Take advantage of our strictly limited seasonal promotional privileges. Apply codes at checkout.</p>
+      </div>
+
+      <!-- Flash Sale Live Countdown Timer -->
+      <div class="countdown-box" data-aos="fade-up" data-aos-delay="100">
+        <div class="countdown-unit">
+          <span class="countdown-val" id="countdown-hours">12</span>
+          <span class="countdown-label">Hours</span>
+        </div>
+        <span class="countdown-separator">:</span>
+        <div class="countdown-unit">
+          <span class="countdown-val" id="countdown-mins">45</span>
+          <span class="countdown-label">Minutes</span>
+        </div>
+        <span class="countdown-separator">:</span>
+        <div class="countdown-unit">
+          <span class="countdown-val" id="countdown-secs">30</span>
+          <span class="countdown-label">Seconds</span>
+        </div>
+      </div>
+
+      <!-- 3 Promotional Cards -->
+      <div class="offers-grid">
+        <!-- Offer 1: 25% Off -->
+        <div class="offer-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="offer-badge">HAUTE RUNWAY SALE</div>
+          <div class="offer-discount">25% <span>OFF</span></div>
+          <h3 class="offer-title">Grand Boutique Privilege</h3>
+          <p class="offer-desc">Enjoy an exceptional 25% off across all couture evening gowns, fine jewellery, and seasonal accessories.</p>
+          <div class="promo-code-box">
+            <span class="promo-code-text">VOGUE25</span>
+            <button class="copy-code-btn" data-code="VOGUE25">Copy Code</button>
+          </div>
+        </div>
+
+        <!-- Offer 2: $50 Off Orders over $200 -->
+        <div class="offer-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="offer-badge">WARDROBE REWARD</div>
+          <div class="offer-discount">$50 <span>OFF</span></div>
+          <h3 class="offer-title">Connoisseur Credit</h3>
+          <p class="offer-desc">Receive an instant $50 reduction on orders over $200. Ideal for luxury timepieces and leather handbags.</p>
+          <div class="promo-code-box">
+            <span class="promo-code-text">LUXE50</span>
+            <button class="copy-code-btn" data-code="LUXE50">Copy Code</button>
+          </div>
+        </div>
+
+        <!-- Offer 3: Complimentary Express Courier -->
+        <div class="offer-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="offer-badge">VIP COURIER</div>
+          <div class="offer-discount">FREE <span>VIP</span></div>
+          <h3 class="offer-title">Complimentary Delivery</h3>
+          <p class="offer-desc">White glove courier express shipping delivered straight to your door with zero shipping charges.</p>
+          <div class="promo-code-box">
+            <span class="promo-code-text">FREESHIP</span>
+            <button class="copy-code-btn" data-code="FREESHIP">Copy Code</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       CUSTOMER TESTIMONIALS SECTION (4 DETAILED HIGH FASHION REVIEWS)
+       ======================================================================== -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Patron Experiences</span>
+        <h2 class="section-title">Acclaim From Our Global Patrons</h2>
+        <p class="section-subtitle">Read unfiltered appraisals from celebrated stylists, creative directors, and discerning fashion collectors worldwide.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+          <i class="fa-solid fa-quote-left quote-icon"></i>
+          <p class="testimonial-text">
+            "The Black Women's Gown exceeded every possible expectation for our Venice Gala appearance. The draping and bespoke silhouette rival custom Parisian couture houses."
+          </p>
+          <div class="testimonial-author">
+            <img class="author-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=300&auto=format&fit=crop" alt="Elena Rostova" />
+            <div class="author-info">
+              <span class="author-name">Elena Rostova</span>
+              <span class="author-role">Fashion Editor & Stylist • Milan</span>
+              <span class="verified-badge"><i class="fa-solid fa-circle-check"></i> Verified VIP Patron</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+          <i class="fa-solid fa-quote-left quote-icon"></i>
+          <p class="testimonial-text">
+            "The horological curation here is magnificent. My Rolex Datejust arrived in immaculate condition via overnight VIP courier with certificate of authenticity. Truly unmatched service."
+          </p>
+          <div class="testimonial-author">
+            <img class="author-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=300&auto=format&fit=crop" alt="Julian Sterling" />
+            <div class="author-info">
+              <span class="author-name">Julian Sterling</span>
+              <span class="author-role">Art Collector & Architect • New York</span>
+              <span class="verified-badge"><i class="fa-solid fa-circle-check"></i> Verified VIP Patron</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+          <i class="fa-solid fa-quote-left quote-icon"></i>
+          <p class="testimonial-text">
+            "From the intuitive online shopping bag to the bespoke packaging, Élégance Atelier represents the pinnacle of digital luxury. The emerald earrings and Prada handbag are timeless."
+          </p>
+          <div class="testimonial-author">
+            <img class="author-avatar" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=300&auto=format&fit=crop" alt="Camilla Dubois" />
+            <div class="author-info">
+              <span class="author-name">Camilla Dubois</span>
+              <span class="author-role">Creative Director • Paris</span>
+              <span class="verified-badge"><i class="fa-solid fa-circle-check"></i> Verified VIP Patron</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       NEWSLETTER SUBSCRIPTION SECTION
+       ======================================================================== -->
+  <section class="newsletter-section" id="newsletter">
+    <div class="container">
+      <div class="newsletter-card" data-aos="zoom-in">
+        <span class="section-tag" style="color: var(--gold-light);">Private Circle</span>
+        <h2 class="newsletter-title">Join The ÉLÉGANCE Circle</h2>
+        <p class="newsletter-subtitle">
+          Subscribe to receive secret trunk show invitations, private lookbooks, and an instant 10% welcome privilege code for your premier acquisition.
+        </p>
+
+        <form class="newsletter-form" id="newsletter-form" novalidate>
+          <input type="email" class="newsletter-input" id="newsletter-email" placeholder="Enter your private email address..." required />
+          <button type="submit" class="btn btn-newsletter" id="newsletter-submit-btn">
+            Request Invitation <i class="fa-solid fa-envelope-open-text"></i>
+          </button>
+        </form>
+        <div id="newsletter-error" class="newsletter-error-box" style="display: none;"></div>
+
+        <p class="newsletter-perk">
+          <i class="fa-solid fa-lock" style="margin-right: 4px;"></i> Strictly confidential. Unsubscribe at any time with a single tap.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Brand Info -->
+        <div class="footer-brand">
+          <a href="#hero" class="brand-logo" style="margin-bottom: 1rem;" title="Élégance Atelier">
+            <img src="logo_0027.webp" alt="Élégance Atelier Brand Logo" class="brand-logo-img footer-logo-img" />
+          </a>
+          <p class="footer-bio">
+            An independent digital fashion atelier dedicated to curating transcendent apparel, authentic leather goods, and refined horology for modern patrons worldwide.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-link" title="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="#" class="social-link" title="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-link" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" class="social-link" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Navigation Columns -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">The Boutique</h4>
+          <ul class="footer-links">
+            <li><a href="#catalog">Boutique Catalog</a></li>
+            <li><a href="#new-arrivals">New Season Drops</a></li>
+            <li><a href="#trending">Trending Now</a></li>
+            <li><a href="#bestsellers">Iconic Best Sellers</a></li>
+            <li><a href="#offers">Private Sale Offers</a></li>
+            <li><a href="404.html">Lookbook Archive</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Client Concierge</h4>
+          <ul class="footer-links">
+            <li><a href="#offers">Exclusive Promo Codes</a></li>
+            <li><a href="#hero">VIP Express Shipping</a></li>
+            <li><a href="#hero">30-Day White Glove Returns</a></li>
+            <li><a href="#hero">Certificate of Authenticity</a></li>
+            <li><a href="#hero">Size & Fit Consultation</a></li>
+            <li><a href="404.html">Patron Portal (404)</a></li>
+          </ul>
+        </div>
+
+        <!-- Salons / Boutiques -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Global Flagships</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <strong>Paris Salon:</strong><br />
+              28 Rue du Faubourg Saint-Honoré, 75008 Paris
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <strong>Milan Atelier:</strong><br />
+              Via Montenapoleone 14, 20121 Milano
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div>concierge@elegance-atelier.com</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 ÉLÉGANCE ATELIER Inc. All Rights Reserved. Crafted with pure Vanilla HTML5, CSS3, JavaScript & DummyJSON Products API.</p>
+        <div class="payment-icons" title="Accepted Payment Gateways">
+          <i class="fa-brands fa-cc-visa"></i>
+          <i class="fa-brands fa-cc-mastercard"></i>
+          <i class="fa-brands fa-cc-amex"></i>
+          <i class="fa-brands fa-cc-apple-pay"></i>
+          <i class="fa-brands fa-cc-paypal"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       SLIDE-OUT SHOPPING BAG DRAWER
+       ======================================================================== -->
+  <div class="drawer-backdrop" id="cart-drawer-backdrop"></div>
+  <aside class="drawer-panel" id="cart-drawer-panel" aria-label="Shopping Bag">
+    <div class="drawer-header">
+      <h3 class="drawer-title">Shopping Bag <span id="cart-drawer-count" style="color: var(--gold-dark); font-size: 1.1rem;">(0)</span></h3>
+      <button class="drawer-close-btn" id="cart-close-btn" title="Close Bag"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <!-- Free Shipping Progress -->
+    <div class="free-shipping-progress">
+      <div class="progress-label" id="shipping-progress-text">
+        Add <strong>$150.00</strong> more for Free VIP Courier Delivery
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="shipping-progress-fill" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <!-- Cart Items Scrollable Body -->
+    <div class="drawer-body" id="cart-drawer-body">
+      <!-- Injected dynamically via JS -->
+    </div>
+
+    <!-- Cart Footer & Checkout -->
+    <div class="drawer-footer">
+      <!-- Coupon Form -->
+      <div class="coupon-input-group">
+        <input type="text" id="cart-coupon-input" class="coupon-input" placeholder="Promo code (e.g. VOGUE25, LUXE50)" />
+        <button id="apply-coupon-btn" class="coupon-apply-btn">Apply</button>
+      </div>
+
+      <!-- Active Coupon Display -->
+      <div id="applied-coupon-container"></div>
+
+      <!-- Summary Breakdown -->
+      <div class="drawer-summary-row">
+        <span>Subtotal</span>
+        <span id="cart-subtotal">$0.00</span>
+      </div>
+      <div class="drawer-summary-row" id="cart-discount-row" style="display: none; color: #10b981; font-weight: 700;">
+        <span>Promo Privilege</span>
+        <span id="cart-discount">-$0.00</span>
+      </div>
+      <div class="drawer-summary-row">
+        <span>VIP Courier Shipping</span>
+        <span id="cart-shipping">$0.00</span>
+      </div>
+      <div class="drawer-summary-row">
+        <span>Estimated Tax (8%)</span>
+        <span id="cart-tax">$0.00</span>
+      </div>
+      <div class="drawer-summary-row total-row">
+        <span>Estimated Total</span>
+        <span id="cart-total" style="color: var(--gold-dark);">$0.00</span>
+      </div>
+
+      <button class="btn btn-checkout" id="btn-proceed-checkout">
+        Proceed to Checkout <i class="fa-solid fa-lock" style="font-size: 0.8rem; margin-left: 6px;"></i>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       SLIDE-OUT WISHLIST DRAWER
+       ======================================================================== -->
+  <div class="drawer-backdrop" id="wishlist-drawer-backdrop"></div>
+  <aside class="drawer-panel" id="wishlist-drawer-panel" aria-label="Wishlist">
+    <div class="drawer-header">
+      <h3 class="drawer-title">Saved Creations <span id="wishlist-drawer-count" style="color: var(--gold-dark); font-size: 1.1rem;">(0)</span></h3>
+      <button class="drawer-close-btn" id="wishlist-close-btn" title="Close Wishlist"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    
+    <div class="drawer-body" id="wishlist-drawer-body">
+      <!-- Injected dynamically via JS -->
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       PRODUCT DETAILS MODAL POPUP
+       ======================================================================== -->
+  <div class="modal-backdrop" id="product-modal-backdrop">
+    <div class="modal-dialog" id="product-modal-dialog">
+      <!-- Injected dynamically via JS -->
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       CHECKOUT MODAL POPUP
+       ======================================================================== -->
+  <div class="modal-backdrop" id="checkout-modal-backdrop">
+    <div class="modal-dialog checkout-modal">
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem;">
+        <img src="logo_0027.webp" alt="Élégance Atelier Logo" class="brand-logo-img" style="height: 36px;" />
+        <button class="modal-close-btn" id="checkout-close-btn" title="Close" style="position: static;"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      
+      <h2 class="checkout-title">VIP Client Checkout</h2>
+      <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1.8rem;">Enter delivery particulars to finalize your acquisition.</p>
+
+      <form id="checkout-form" novalidate>
+        <div class="checkout-form-grid">
+          <div class="form-group">
+            <label class="form-label" for="checkout-name">Full Name *</label>
+            <input type="text" id="checkout-name" class="form-control" placeholder="e.g. Lady Genevieve Sterling" required />
+            <span class="form-error-msg" id="error-checkout-name" style="display:none;"></span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="checkout-email">Email Address *</label>
+            <input type="email" id="checkout-email" class="form-control" placeholder="client@domain.com" required />
+            <span class="form-error-msg" id="error-checkout-email" style="display:none;"></span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="checkout-phone">Telephone *</label>
+            <input type="tel" id="checkout-phone" class="form-control" placeholder="+1 (555) 019-2834" required />
+            <span class="form-error-msg" id="error-checkout-phone" style="display:none;"></span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="checkout-city">City *</label>
+            <input type="text" id="checkout-city" class="form-control" placeholder="New York / Paris / London" required />
+            <span class="form-error-msg" id="error-checkout-city" style="display:none;"></span>
+          </div>
+
+          <div class="form-group full-width">
+            <label class="form-label" for="checkout-address">Delivery Address *</label>
+            <input type="text" id="checkout-address" class="form-control" placeholder="Street number, residence, penthouse" required />
+            <span class="form-error-msg" id="error-checkout-address" style="display:none;"></span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="checkout-zip">Postal / ZIP Code *</label>
+            <input type="text" id="checkout-zip" class="form-control" placeholder="10021" required />
+            <span class="form-error-msg" id="error-checkout-zip" style="display:none;"></span>
+          </div>
+        </div>
+
+        <label class="form-label" style="margin-bottom: 0.6rem; display: block;">Select Payment Instrument</label>
+        <div class="payment-options">
+          <label class="payment-radio-label active">
+            <input type="radio" name="payment-method" value="Credit Card" checked style="display:none;" />
+            <i class="fa-solid fa-credit-card" style="font-size: 1.2rem;"></i>
+            <span>Credit Card</span>
+          </label>
+          <label class="payment-radio-label">
+            <input type="radio" name="payment-method" value="Apple Pay" style="display:none;" />
+            <i class="fa-brands fa-apple-pay" style="font-size: 1.4rem;"></i>
+            <span>Apple Pay</span>
+          </label>
+          <label class="payment-radio-label">
+            <input type="radio" name="payment-method" value="PayPal" style="display:none;" />
+            <i class="fa-brands fa-paypal" style="font-size: 1.2rem;"></i>
+            <span>PayPal VIP</span>
+          </label>
+        </div>
+        <span class="form-error-msg" id="error-checkout-payment" style="display:none; margin-bottom: 1rem;"></span>
+
+        <!-- Order Summary Preview inside Checkout -->
+        <div style="background: #f8fafc; border-radius: 8px; padding: 1.2rem; margin-bottom: 1.5rem; border: 1px solid #e2e8f0;">
+          <h4 style="font-family: var(--font-serif); font-size: 1.05rem; margin-bottom: 0.6rem;">Acquisition Summary</h4>
+          <div id="checkout-items-summary" style="max-height: 120px; overflow-y: auto; margin-bottom: 0.8rem;"></div>
+          <div style="display:flex; justify-content:space-between; font-weight:700; font-size:1.15rem; border-top:1px solid #cbd5e1; padding-top:0.6rem;">
+            <span>Grand Total:</span>
+            <span id="checkout-grand-total" style="color: var(--gold-dark);">$0.00</span>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="checkout-submit-btn" style="width: 100%; height: 50px;">
+          <i class="fa-solid fa-check"></i> Place Order & Authorize
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       ORDER CONFIRMATION POPUP MODAL
+       ======================================================================== -->
+  <div class="modal-backdrop" id="order-success-modal-backdrop">
+    <div class="modal-dialog order-success-modal">
+      <img src="logo_0027.webp" alt="Élégance Atelier Logo" class="brand-logo-img" style="height: 40px; margin: 0 auto 1.25rem auto;" />
+      <div class="success-icon-box">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <h2 class="order-success-title">Order Confirmed</h2>
+      <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 1rem;">
+        Thank you for patronizing Élégance Atelier. Your order has been placed into atelier preparation.
+      </p>
+
+      <span class="order-id-tag" id="order-number">Order #ELG-89241</span>
+
+      <div class="order-details-box">
+        <div style="margin-bottom: 0.4rem;"><strong>Client Name:</strong> <span id="order-customer-name">Valued Client</span></div>
+        <div style="margin-bottom: 0.4rem;"><strong>Delivery Address:</strong> <span id="order-shipping-address">Address</span></div>
+        <div style="margin-bottom: 0.4rem;"><strong>Delivery Estimate:</strong> <span id="order-delivery-eta">3 - 5 Business Days</span></div>
+        <div><strong>Total Charged:</strong> <span id="order-total-charged" style="color: var(--gold-dark); font-weight: 700;">$0.00</span></div>
+      </div>
+
+      <button class="btn btn-primary" id="order-continue-btn" style="width: 100%;">
+        Continue Exploring Collections
+      </button>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       FLOATING TOAST NOTIFICATION CONTAINER
+       ======================================================================== -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- ========================================================================
+       SCRIPTS (GSAP, AOS, API, CART, WISHLIST, APP)
+       ======================================================================== -->
+  <!-- GSAP Animation Engine CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+  <!-- AOS (Animate on Scroll) CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <!-- Application Logic Modules -->
+  <script src="js/api.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/wishlist.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
