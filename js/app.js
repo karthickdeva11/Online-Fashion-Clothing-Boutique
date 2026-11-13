@@ -389,8 +389,9 @@ function initHeader() {
   // Mobile Menu Toggle
   if (mobileToggle && desktopNav) {
     mobileToggle.addEventListener('click', () => {
-      mobileToggle.classList.toggle('active');
+      const isActive = mobileToggle.classList.toggle('active');
       desktopNav.classList.toggle('active');
+      document.body.style.overflow = isActive ? 'hidden' : '';
     });
 
     // Close mobile nav when clicking a link
@@ -398,7 +399,17 @@ function initHeader() {
       link.addEventListener('click', () => {
         mobileToggle.classList.remove('active');
         desktopNav.classList.remove('active');
+        document.body.style.overflow = '';
       });
+    });
+
+    // Reset mobile nav state if viewport expands beyond tablet breakpoint
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 1024 && desktopNav.classList.contains('active')) {
+        mobileToggle.classList.remove('active');
+        desktopNav.classList.remove('active');
+        document.body.style.overflow = '';
+      }
     });
   }
 
@@ -822,8 +833,8 @@ function initEventListeners() {
     const link = e.target.closest('a');
     if (!link) return;
 
-    // Exempt navbar (header, nav, announcement bar, mobile toggle) and footer
-    const inNavbar = link.closest('.site-header, header, nav, #desktop-nav, .announcement-bar');
+    // Exempt navbar (header, nav, mobile toggle) and footer
+    const inNavbar = link.closest('.site-header, header, nav, #desktop-nav');
     const inFooter = link.closest('.site-footer, footer');
 
     if (inNavbar || inFooter) {

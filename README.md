@@ -7,7 +7,6 @@ A modern, high-end **Haute Couture & Luxury Ready-to-Wear Online Fashion Boutiqu
 ## ✨ Features & Requirements Fulfilled
 
 ### 1. Required Homepage Sections
-- **Top Announcement Bar**: Displays promotional privileges, complimentary VIP express shipping notification, currency selector (`USD`, `EUR`, `GBP`), and concierge contact.
 - **Brand Logo & Favicon**: The custom brand logo image (`logo_0027.webp`) is positioned across the site (Header navigation, Footer, VIP Checkout modal, Order Success modal, and browser Favicon).
 - **Header & Navigation**: Sticky luxury navigation with brand logo image, smooth navigation links, wishlist badge counter, interactive cart bag with live subtotal, and an animated mobile hamburger menu.
 - **Hero Section (Interactive Fashion Slider)**:
@@ -77,10 +76,18 @@ A modern, high-end **Haute Couture & Luxury Ready-to-Wear Online Fashion Boutiqu
 - **Checkout & Order Validation**:
   - VIP checkout modal with full validation for Name, Email, Phone, City, Address, ZIP, and Payment instrument selection.
   - Highlights input errors with visual alerts; upon successful validation, authorizes order and redirects to `404.html?from=checkout`.
-- **Mobile Responsive Drawer**:
-  - Slide-out mobile navigation drawer on screens $\le 768\text{px}$.
+- **Strict Multi-Device Responsiveness**:
+  - Precision engineered and tested across all key device viewports:
+    - **`375px`** (iPhone SE, iPhone mini, compact mobiles): single-column layout, compact logo, touch-optimized countdown boxes, 100% full-width drawers and modals with zero overflow.
+    - **`390px`** (iPhone 12/13/14/15/16 standard): fluid typography, proportional card sizing, horizontal touch-scrolling filter pills.
+    - **`414px`** (iPhone Plus, Pro Max, XR, 11): spacious mobile layout with stacked CTA buttons and optimized media frames.
+    - **`768px`** (iPad Mini, standard tablets portrait): 2-column product and category grids, sleek slide-out navigation drawer with body scroll lock.
+    - **`1024px`** (iPad Pro, tablet landscape, small laptops): touch-optimized drawer menu preventing navigation link collision, balanced 2-column catalog.
+    - **`1080px`** (Surface Pro, small desktops, FHD laptops): compact desktop navigation with tuned letter-spacing and 3-column product grid.
+    - **`1440px`** (Standard desktop, 2K displays): 4-column product grid, spacious typography, full desktop navigation.
+    - **`1920px`** (Full HD desktop, ultra-wide & 4K monitors): container expanded to 1560px with generous margins and centered luxury layout.
 - **Toast Alerts**:
-  - Floating toast notifications for feedback across all interactions.
+  - Floating toast notifications adapted for mobile and desktop screens.
 
 ### 4. Animations (GSAP & AOS)
 - **GSAP (GreenSock)**:
